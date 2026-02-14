@@ -1,0 +1,255 @@
+body { 
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    padding: 15px 20px;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+.header-content {
+    max-width: 920px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-title {
+    font-size: 22px;
+    font-weight: 600;
+    white-space: nowrap;
+    flex-shrink: 0;
+    color: #111827;
+    letter-spacing: -0.3px;
+}
+
+#search { 
+    width: 100%;
+    padding: 10px 14px; 
+    border: 1px solid #d1d5db; 
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background: #ffffff;
+    transition: all 0.2s;
+    height: 40px;
+    color: #111827;
+}
+
+#search:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: #ffffff;
+}
+
+#search::placeholder {
+    color: #9ca3af;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 920px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.config-item { 
+    border: 1px solid #e5e7eb;
+    padding: 16px 0;
+    margin-bottom: 12px; 
+    border-radius: 14px;
+    box-sizing: border-box;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.config-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.config-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.config-name {
+    font-weight: 500;
+    font-size: 18px;
+    padding-bottom: 0.9rem;
+    padding-top: 0.9rem;
+    padding-left: 0.1rem;
+    color: #111827;
+}
+
+.config-update {  
+    color: #6b7280;
+    font-size: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.checkmark-icon { 
+    color: #3b82f6; 
+    font-size: 16px;
+}
+
+.config-description {  
+    color: #374151;
+    font-family: sans-serif;
+    margin: 0;
+    background: transparent;
+    border: none;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.config-description.expanded {
+    max-height: 300px;
+    display: block;
+}
+
+.params-container {
+    display: flex;
+    gap: 1px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #e5e7eb;
+}
+
+.param-section {
+    flex: 1;
+    background: #ffffff;
+    padding: 14px 12px;
+    border: none;
+}
+
+.param-title {
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: #4b5563;
+    text-align: left;
+    letter-spacing: 0.2px;
+}
+
+.param-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.param-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.param-label {
+    color: #4b5563;
+    font-weight: 400;
+}
+
+.param-value {
+    font-weight: 500;
+    color: #3b82f6;
+    background: #eff6ff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    min-width: 36px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #bfdbfe;
+}
+
+.config-code { 
+    display: none;
+}
+
+.button-container {
+    display: flex;
+    gap: 8px;
+    width: calc(100% - 32px);
+    margin: 4px 16px 0 16px;
+}
+
+.copy-button { 
+    flex: 4;
+    background: #3b82f6; 
+    color: white; 
+    border: none; 
+    padding: 10px 10px; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s;
+    height: 38px;
+}
+
+.copy-button:hover {
+    background: #2563eb;
+}
+
+.expand-button {
+    flex: 1;
+    background: #f3f4f6;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    padding: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.2s;
+    height: 38px;
+}
+
+.expand-button:hover {
+    background: #e5e7eb;
+}
+
+.expand-button i {
+    font-size: 20px;
+    color: #4b5563;
+}
